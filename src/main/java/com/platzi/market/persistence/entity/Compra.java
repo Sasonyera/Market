@@ -1,9 +1,6 @@
 package com.platzi.market.persistence.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -12,6 +9,7 @@ import java.time.LocalDateTime;
 @Table(name="compras")
 public class Compra {
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id_compra")
     private Integer idCompra;
 

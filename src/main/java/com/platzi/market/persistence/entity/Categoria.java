@@ -9,6 +9,7 @@ import jakarta.persistence.Table;
 @Table(name="categorias")
 public class Categoria {
     @Id
+
     @Column(name="id_categoria")
     private Integer idCategoria;
 

@@ -1,8 +1,17 @@
 package com.platzi.market.persistence.crud;
 
 import com.platzi.market.persistence.entity.Producto;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
-public interface ProductoCrudRepository extends CrudRepository<Producto,Integer> {
+import java.util.List;
+import java.util.Optional;
 
+public interface ProductoCrudRepository extends CrudRepository<Producto,Integer> {
+    //Query de forma nativa
+    // @Query(value = "SELECT * FROM productos WHERE id_categoria = ?",nativeQuery = true)
+    List<Producto>findByIdCategoriaOrderByNombreAsc(int idCategoria);
+
+ Optional<List<Producto>> findByCantidadStockLessThanAndEstado(int cantidadStock, Boolean estado);
 }
+

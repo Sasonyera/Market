@@ -1,4 +1,4 @@
-package com.platzi.market.persistence;
+package com.platzi.market;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

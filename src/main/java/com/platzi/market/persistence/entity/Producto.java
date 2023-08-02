@@ -3,7 +3,7 @@ package com.platzi.market.persistence.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="productos")
+@Table(name= "productos")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
